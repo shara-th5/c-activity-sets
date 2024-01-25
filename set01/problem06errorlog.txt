@@ -1,0 +1,18 @@
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gcc problem06.c
+problem06.c: In function 'compare':
+problem06.c:15:10: error: 'largest' redeclared as different kind of symbol
+     int *largest;
+          ^~~~~~~
+problem06.c:13:40: note: previous definition of 'largest' was here
+ void compare(int a, int b, int c, int *largest)
+                                        ^~~~~~~
+     return largest;
+            ^~~~~~~
+problem06.c:13:6: note: declared here
+ void compare(int a, int b, int c, int *largest)
+      ^~~~~~~
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gcc problem06.c
+problem06.c: In function 'compare':
+          ^~~~~~~
+problem06.c:13:40: note: previous definition of 'largest' was here
+ void compare(int a, int b, int c, int *largest)

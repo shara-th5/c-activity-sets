@@ -1,0 +1,59 @@
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gdb
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file problem06.exe   
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem06.exe...done.
+(gdb) l
+33          }
+34          else
+35          {
+36          printf("the largest btw %d and %d and %d is %d",a,b,c,largest);
+37          }
+38      }
+39      int main()
+40      {
+41          int a,b,c,largest;
+42          a=input(&a,&b,&c);
+(gdb)
+43          b=input(&a,&b,&c);
+44          c=input(&a,&b,&c);
+45          compare(a,b,c,&largest);
+46          output(a,b,c,largest);
+47          return 0;
+48      }(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem06.exe 
+[New Thread 6216.0x235c]
+[New Thread 6216.0x9c8]
+Enter the first number5
+Enter the first number6
+Enter the first number7
+the largest btw 5 and 6 and 7 is 7[Inferior 1 (process 6216) exited normally]
+(gdb) b 28
+Breakpoint 1 at 0x4014e4: file problem06.c, line 28.
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem06.exe 
+[New Thread 1016.0x1ee0]
+[New Thread 1016.0x2fb0]
+Enter the first number5
+Enter the first number6
+Enter the first number7
+
+Breakpoint 1, output (a=5, b=6, c=7, largest=7) at problem06.c:30
+30          if(a==b&&b==c)
+(gdb) n
+36          printf("the largest btw %d and %d and %d is %d",a,b,c,largest);
+(gdb) n
+the largest btw 5 and 6 and 7 is 738    }
+(gdb) n
+main () at problem06.c:47
+47          return 0;
+(gdb)

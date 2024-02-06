@@ -48,7 +48,7 @@ Enter the first number6
 Enter the first number7
 
 Breakpoint 1, output (a=5, b=6, c=7, largest=7) at problem06.c:30
-30          if(a==b&&b==c)
+30          if(a==b&&b==c)q
 (gdb) n
 36          printf("the largest btw %d and %d and %d is %d",a,b,c,largest);
 (gdb) n

@@ -1,0 +1,46 @@
+(gdb) file problem01.exe
+"C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem01.exe": not in executable format: File truncated
+(gdb) file problem06.exe
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem06.exe...done.
+(gdb) file problem01.
+problem01.: No such file or directory.
+(gdb) file problem01.exe
+"C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem01.exe": not in executable format: File truncated
+(gdb) q
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gcc "problem02.c" -o problem02 -O0 -g
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gdb
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file problem02.exe
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem02.exe...done.
+(gdb) q
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gcc "problem01.c" -o problem01 -O0 -g
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gdb
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file problem01.exe
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem01.c, line 5.
+(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem01.exe 
+[New Thread 10580.0xaec]
+[New Thread 10580.0x20f0]
+
+Breakpoint 1, main () at problem01.c:5
+5           printf("My name is Sharath Kumar S");
+(gdb) c
+Continuing.
+My name is Sharath Kumar S[Inferior 1 (process 10580) exited normally]

@@ -1,0 +1,59 @@
+gdb
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) b output
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (output) pending.
+(gdb) r
+Starting program:  
+No executable specified, use `target exec'.
+(gdb) r
+Starting program:  
+No executable specified, use `target exec'.
+(gdb) c
+The program is not being run.
+(gdb) q
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> git add .           
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> git commit -m "test"
+[main f6e533a] test
+ 5 files changed, 4 insertions(+), 4 deletions(-)
+ create mode 100644 set01/problem07debuglog.txt
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gdb                
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) b output
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (output) pending.
+(gdb) r
+Starting program:  
+No executable specified, use `target exec'.
+(gdb) file a.exe
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\a.exe...done.
+(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/a.exe 
+[New Thread 1860.0x150c]
+[New Thread 1860.0x2b78]
+Enter the first number4
+Enter the first number5
+Enter the first number5
+
+Breakpoint 1, 0x004014e4 in output ()
+(gdb) c
+Continuing.
+the largest btw 4 and 5 and 5 is 5[Inferior 1 (process 1860) exited normally]

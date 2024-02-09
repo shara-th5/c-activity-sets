@@ -1,0 +1,65 @@
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gcc -g -O0 problem09.c -o problem09.exe
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gdb
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file problem09.exe
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem09.exe...done.
+(gdb) b square_root
+Breakpoint 1 at 0x401490: file problem09.c, line 13.
+(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem09.exe 
+[New Thread 1892.0x27e0]
+[New Thread 1892.0x1dc0]
+Enter number: 25
+
+Breakpoint 1, square_root (n=25) at problem09.c:13
+13          float x = n;
+(gdb) n
+14          float y = 1;
+(gdb) n
+15          float a = 0.000001;
+(gdb) n
+16          while (x - y > a)
+(gdb) n
+18              x = (x + y) / 2;
+(gdb) n
+19              y = n / x;
+(gdb) n
+16          while (x - y > a)
+(gdb) n
+18              x = (x + y) / 2;
+(gdb) n
+19              y = n / x;
+(gdb) n
+16          while (x - y > a)
+(gdb) n
+18              x = (x + y) / 2;
+(gdb) n
+19              y = n / x;
+(gdb) n
+16          while (x - y > a)
+(gdb) n
+18              x = (x + y) / 2;
+(gdb) n
+19              y = n / x;
+(gdb) n
+16          while (x - y > a)
+(gdb) n
+18              x = (x + y) / 2;
+(gdb) n
+19              y = n / x;
+(gdb) n
+16          while (x - y > a)
+(gdb) n
+18              x = (x + y) / 2;
+(gdb) c
+Continuing.
+Square root of 25.0 is 5.0
+[Inferior 1 (process 1892) exited normally]

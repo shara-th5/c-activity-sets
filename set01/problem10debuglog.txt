@@ -1,0 +1,33 @@
+PS C:\Users\shara\Documents\git repository\c-activity-sets\set01> gdb
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) b output
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (output) pending.
+(gdb) file problem10.exe
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem10.exe...done.
+(gdb) b output
+Note: breakpoint 1 also set at pc 0x401548.
+Breakpoint 2 at 0x401548: file problem10.c, line 26.
+(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/problem10.exe 
+[New Thread 19372.0x49f0]
+[New Thread 19372.0x4808]
+Enter string1:hello
+Enter string2:world
+
+Breakpoint 1, output (string1=0x61feb8 "hello", string2=0x61fe54 "world", result=-1) at problem10.c:26
+26          if (result==1)
+(gdb) c
+Continuing.
+world is greater than hello[Inferior 1 (process 19372) exited normally]
+(gdb) n
+The program is not being run.

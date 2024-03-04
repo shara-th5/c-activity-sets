@@ -1,0 +1,23 @@
+Reading symbols from C:\Users\shara\Documents\git repository\c-activity-sets\set01\problem11.exe...done.
+(gdb) b output
+Breakpoint 1 at 0x4014d9: file problem11.c, line 26.
+(gdb) r
+Starting program: C:\Users\shara\Documents\git repository\c-activity-sets\set01/./problem11.exe 
+[New Thread 11304.0x1dc8]
+[New Thread 11304.0x2a58]
+Enter the first complex number:
+Enter the real part: 1
+Enter the imaginary part: 2
+Enter the second complex number:
+Enter the real part: 3
+Enter the imaginary part: 4
+
+Breakpoint 1, output (a=..., b=..., sum=...) at problem11.c:26
+26          printf("The sum of %.1f+%.1fi and %.1f+%.1fi is %.1f+%.1fi\n", a.real, a.imaginary, b.real, b.imaginary, sum.real, sum.imaginary);
+(gdb) n
+The sum of 1.0+2.0i and 3.0+4.0i is 4.0+6.0i
+27      
+(gdb) n
+main () at problem11.c:37
+37          return 0;
+(gdb) n
